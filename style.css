@@ -1,0 +1,21 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+/* Variables */
+
+/* Color Palette */
+
+:root {
+   color-fuzzy-wuzzy: #C1666B;
+   color-isabelline: #F4EDEA;
+   color-space-cadet: #2B3A67; 
+   color-steel-teal: #55868C;
+   color-yellow-crayola: #FFE787;
+}
+
+/* Core Styles */
+
+body {
+    font-family: 'Arimo', sans-serif;
+}
