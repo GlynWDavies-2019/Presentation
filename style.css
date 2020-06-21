@@ -4,21 +4,110 @@
 
 /* Variables */
 
-/* Color Palette */
-
 :root {
-   --color-black: #000000;
-   --color-fuzzy-wuzzy: #C1666B;
-   --color-gray: #CCCCCC;
-   --color-isabelline: #F4EDEA;
-   --color-space-cadet: #2B3A67; 
-   --color-steel-teal: #55868C;
-   --color-white: #FFFFFF;
-   --color-yellow-crayola: #FFE787;
+    --color-black: #000000;
+    --color-fuzzy-wuzzy: #C1666B;
+    --color-gray: #CCCCCC;
+    --color-isabelline: #F4EDEA;
+    --color-space-cadet: #2B3A67; 
+    --color-steel-teal: #55868C;
+    --color-white: #FFFFFF;
+    --color-yellow-crayola: #FFE787;
 }
 
 /* Core Styles */
 
 body {
+    color: var(--color-white);
     font-family: 'Arimo', sans-serif;
+    line-height: 1.4;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#page-1 {
+    background-color: var(--color-yellow-crayola);
+}
+
+#page-1 h1 {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: drop-in;
+    transform: translateY(-2000px);
+}
+
+@keyframes drop-in {
+    to {
+        transform: translateY(0px);
+    }
+}
+
+#page-1 p {
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: fly-in;
+    transform: translateX(-3000px);
+}
+
+@keyframes fly-in {
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#page-2 {
+    background-color: var(--color-space-cadet);
+}
+
+#page-3 {
+    background-color: var(--color-steel-teal);
+}
+
+#page-4 {
+    background-color: var(--color-fuzzy-wuzzy);
+}
+
+.page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 0rem 4rem;
+    text-align: center;
+}
+
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.page p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    background-color: var(--color-isabelline);
+    border: none;
+    color: var(--color-black);
+    display: inline-block;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark  {
+    background-color: var(--color-black);
+    color: var(--color-isabelline);
+}
+
+.btn-dark:hover {
+    background-color: var(--color-isabelline);
+    color: var(--color-black);
 }
